@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 所有接口的url地址 -->
+<resources>
+    
+    <!-- 域名（开发环境） -->
+    <string name="server_url">http://www.weather.com.cn/data/sk/</string>
+    <!-- 域名（测试环境） -->
+    <!-- <string name="server_url"></string> -->
+    <!-- 域名（正式环境） -->
+    <!-- <string name="server_url"></string> -->
+
+    <!-- get请求地址 -->
+    <string name="get_url">101010100.html</string>
+
+</resources>
