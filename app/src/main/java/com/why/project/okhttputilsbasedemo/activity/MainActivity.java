@@ -12,6 +12,7 @@ import com.why.project.okhttputilsbasedemo.R;
 import com.why.project.okhttputilsbasedemo.logic.LoginLogic;
 import com.why.project.okhttputilsbasedemo.utils.ToastUtil;
 import com.why.project.okhttputilsbasedemo.utils.httputil.HttpUtil;
+import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
 
 import org.json.JSONException;
@@ -34,6 +35,14 @@ public class MainActivity extends AppCompatActivity {
 
 		initViews();
 		initEvents();
+	}
+
+	@Override
+	public void onPause() {
+		// TODO Auto-generated method stub
+		super.onPause();
+		//取消网络请求,根据tag取消请求
+		OkHttpUtils.getInstance().cancelTag(this);
 	}
 
 	private void initViews() {
