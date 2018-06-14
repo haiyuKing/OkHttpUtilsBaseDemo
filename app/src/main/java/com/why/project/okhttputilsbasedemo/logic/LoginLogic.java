@@ -1,6 +1,6 @@
 package com.why.project.okhttputilsbasedemo.logic;
 
-import android.content.Context;
+import com.why.project.okhttputilsbasedemo.MyApplication;
 import com.why.project.okhttputilsbasedemo.R;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
@@ -14,13 +14,13 @@ public class LoginLogic extends BaseLogic {
 	
 	private static LoginLogic _Instance = null;
 
-    public static LoginLogic Instance(Context context) {
+    public static LoginLogic Instance() {
         if (_Instance == null)
-            _Instance = new LoginLogic(context);
+            _Instance = new LoginLogic();
         return _Instance;
     }
-    private LoginLogic(Context context) {
-        this.context = context;
+    private LoginLogic() {
+		this.context = MyApplication.getAppContext();//防止了内存泄漏
     }
 
 	/**
