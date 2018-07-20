@@ -25,7 +25,7 @@ public class LoginLogic extends BaseLogic {
 	/**
 	 * get请求测试
 	 */
-	public String getJson(StringCallback callback)
+	public String getJsonApi(StringCallback callback)
 			throws Exception {
 		String result = "";
 		OkHttpUtils

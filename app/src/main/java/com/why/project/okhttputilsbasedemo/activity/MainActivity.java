@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
 		if (HttpUtil.isNetworkAvailable(this)) {
 			//执行网络请求接口
 			try {
-				LoginLogic.Instance().getJson(new GetJsonStringCallback());
+				LoginLogic.Instance().getJsonApi(new GetJsonStringCallback());
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
