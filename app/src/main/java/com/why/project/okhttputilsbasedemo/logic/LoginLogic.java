@@ -1,7 +1,6 @@
 package com.why.project.okhttputilsbasedemo.logic;
 
 import com.why.project.okhttputilsbasedemo.MyApplication;
-import com.why.project.okhttputilsbasedemo.R;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
 
@@ -31,7 +30,7 @@ public class LoginLogic extends BaseLogic {
 		String result = "";
 		OkHttpUtils
 				.get()
-				.url(getSpcyUrl(context.getString(R.string.get_url)))
+				.url(getSpcyUrl(ServerApi.GET_URL))
 				.id(100)
 				.tag(context)
 				.build()
